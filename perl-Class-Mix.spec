@@ -1,10 +1,10 @@
 #
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
-#
-%include	/usr/lib/rpm/macros.perl
+
 %define		pdir	Class
 %define		pnam	Mix
+%include	/usr/lib/rpm/macros.perl
 Summary:	Class::Mix - dynamic class mixing
 Name:		perl-Class-Mix
 Version:	0.005
@@ -14,6 +14,7 @@ License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	7d6c4e70dea13678d845898a4a1565c0
+URL:		http://search.cpan.org/dist/Class-Mix/
 BuildRequires:	perl-Params-Classify
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
