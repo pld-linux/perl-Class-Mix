@@ -7,13 +7,13 @@
 %include	/usr/lib/rpm/macros.perl
 Summary:	Class::Mix - dynamic class mixing
 Name:		perl-Class-Mix
-Version:	0.005
+Version:	0.006
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	7d6c4e70dea13678d845898a4a1565c0
+# Source0-md5:	14f9d08abf878afc1592f3861cf98be4
 URL:		http://search.cpan.org/dist/Class-Mix/
 BuildRequires:	perl-Params-Classify
 BuildRequires:	perl-devel >= 1:5.8.0
@@ -29,18 +29,17 @@ The mix_class function provided by this module dynamically generates
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-%{__perl} Makefile.PL \
-	INSTALLDIRS=vendor
+%{__perl} Build.PL \
+        --destdir=$RPM_BUILD_ROOT \
+        --installdirs=vendor
+./Build
 
-%{__make}
-
-%{?with_tests:%{__make} test}
+%{?with_tests:./Build test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT
+./Build install
 
 %clean
 rm -rf $RPM_BUILD_ROOT
