@@ -4,7 +4,6 @@
 
 %define		pdir	Class
 %define		pnam	Mix
-%include	/usr/lib/rpm/macros.perl
 Summary:	Class::Mix - dynamic class mixing
 Name:		perl-Class-Mix
 Version:	0.006
