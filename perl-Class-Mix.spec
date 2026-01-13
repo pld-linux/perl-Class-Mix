@@ -8,7 +8,7 @@ Summary:	Class::Mix - dynamic class mixing
 Summary(pl.UTF-8):	Class::Mix - dynamiczne mieszanie klas
 Name:		perl-Class-Mix
 Version:	0.006
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
